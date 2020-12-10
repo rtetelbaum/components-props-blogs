@@ -1,6 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
-import BlogsList from './containers/BlogsList'
+import BlogsList from './Containers/BlogsList'
 
 function App() {
   return (
