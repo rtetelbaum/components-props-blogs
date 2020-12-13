@@ -14,11 +14,15 @@ class App extends React.Component {
 		if (!blogAlreadySaved) {this.setState(prevState => ( {savedBlogs: [...prevState.savedBlogs, blogObj]} ))}
 	}
 
+	deleteBlog = (id) => {
+		this.setState(prevState => ( {savedBlogs: prevState.savedBlogs.filter( blogObj => blogObj.id !== id )} ))
+	}
+
 	render() {
 		return (
 			<div className="App">
 				<BlogsList saveBlog={this.saveBlog}/>
-				<SavedBlogs savedBlogs={this.state.savedBlogs} />
+				<SavedBlogs savedBlogs={this.state.savedBlogs} deleteBlog={this.deleteBlog} />
 			</div>
 		);
 	}

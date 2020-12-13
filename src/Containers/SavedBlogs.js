@@ -3,7 +3,7 @@ import BlogCard from '../Components/BlogCard'
 
 function SavedBlogs(props) {
 
-	const blogsArray = props.savedBlogs.map(blogObj => <BlogCard blogObj={blogObj} key={blogObj.id} savedBlogs={props.savedBlogs} />)
+	const blogsArray = props.savedBlogs.map(blogObj => <BlogCard blogObj={blogObj} key={blogObj.id} deleteBlog={props.deleteBlog} />)
 	
 	return (
 		<>
